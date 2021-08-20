@@ -13,12 +13,16 @@ library(palmerpenguins)
 
 ```{r}
 ggplot(penguins, aes(x = species, y = body_mass_g)) +
-  geom_violin(aes(fill = species)) + 
+  geom_violin(aes(fill = species),
+              alpha = 0.5) + 
   theme_grey() +
   labs(title = "Violin Plot of Mass of Different Penguin Species", 
        x = "Species", 
        y = "Body Mass (g)", 
-       fill = "Species")
+       fill = "Species") +
+  theme(
+    plot.background = element_rect(fill = "beige")
+  )
 
 
 
