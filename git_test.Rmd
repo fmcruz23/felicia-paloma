@@ -21,10 +21,10 @@ ggplot(penguins, aes(x = species, y = body_mass_g)) +
        y = "Body Mass (g)", 
        fill = "Species") +
   theme(
-    plot.background = element_rect(fill = "beige")
+    plot.background = element_rect(fill = "beige"),
+    panel.grid.major = element_line(color = "pink"),
+    panel.grid.minor = element_line(color = "lightblue")
   )
-
-
 
 ```
 
